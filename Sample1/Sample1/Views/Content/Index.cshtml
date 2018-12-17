@@ -1,0 +1,48 @@
+﻿@model ContentViewModel
+@using Humanizer;
+@{
+    ViewData["Title"] = "内容列表";
+}
+
+<h1>Index</h1>
+<script language="javascript">
+    function buttonClick() {
+        //var m = new Test();
+        //alert(m.Method());
+        alert(123);
+    }
+</script>
+
+<div class="panel panel-default todo-panel">
+    <button name="button" onclick="buttonClick()">Click</button>
+    @{
+        
+    }
+    <div class="panel-heading">@ViewData["Title"]</div>
+    <table class="table table-hover">
+        <thead>
+            <tr style="text-align:left">
+                <td><input type="checkbox" class="done-checkbox" name="name" value="" /></td>
+                <td>序号</td>
+                <td>标题</td>
+                <td>内容</td>
+                <td>添加时间</td>
+                <td></td>
+                <td>修改时间</td>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model.Contents)
+        {
+            <tr>
+                <td><input type="checkbox" class="done-checkbox" name="name" value="" /></td>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.ContentA</td>
+                <td>@item.Add_time</td>
+                <td>@item.Add_time.Humanize()</td>
+                <td>@item.Modify_time</td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ],
+  "ContentList": {
+    "Id": 2,
+    "Title": "title2",
+    "ContentA": "Content",
+    "Add_time": "2018-12-12 16:04",
+    "Modify_time": null
+  }
+}
